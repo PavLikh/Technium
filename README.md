@@ -3,8 +3,11 @@
 <details>
 <summary>4.1.Декораторы</summary>
 
+[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-1-decorators)
+
 ## Задача 1.
 Измерьте с помощью декоратора measure_execution_time продолжительность HTTP запроса к произвольному url (можно взять код из первых уроков по ботам)
+[списка](https://applicant.21-school.ru/specialties).
 
 ## Задача 2. 
 Описание задачи:

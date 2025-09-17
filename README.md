@@ -1,6 +1,6 @@
 # Technium
 
-<details open>
+<details>
 <summary>4.1.Декораторы</summary>
 
 ## Задача 1.

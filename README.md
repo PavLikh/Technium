@@ -62,7 +62,7 @@ print(delete_user(regular_user, 'Charlie')) # Должно рейзить Permis
 Результатом выполнения программы должно быть сообщение о том, является ли данная строка правильной скобочной последовательностью или нет. В идеале код должен содержать реализацию класса Стек и функцию для проверки строки со скобками. 
 </details>
 <details>
-<summary>4.6 Обратная польская нотаци</summary>
+<summary>4.6 Обратная польская нотация</summary>
 
 [link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-6-reverse_polish_notation)
 
@@ -92,4 +92,10 @@ print(delete_user(regular_user, 'Charlie')) # Должно рейзить Permis
     - Если токен - операнд (число), поместить его в стек.
     - Если токен - оператор (+, -, *, /), извлечь два верхних элемента из стека (это будут операнды), выполнить операцию с ними и результат поместить обратно в стек.
 - После обработки всех токенов входного выражения, в стеке должен остаться единственный элемент - результат вычислений.
+</details>
+<details>
+<summary>4.7 Очередь</summary>
+
+[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-7-queue)
+
 </details>

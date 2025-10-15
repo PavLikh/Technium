@@ -136,3 +136,43 @@ print(f"Очередь пуста: {queue.is_empty()}")  # Ожидаемый р
 ```
 
 </details>
+<details>
+<summary>4.13 DFS через классы</summary>
+
+[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-13-grapf_dfs_class)
+
+Цель этого задания - создать программу для управления задачами с использованием структуры данных "очередь". Задачи будут представлены в виде объектов, и программа должна поддерживать операции добавления задачи в очередь, извлечения задачи из очереди и проверки состояния очереди.
+
+### Требования 
+Дописать реализацию функции dfs() для графа. Подсказка: в функции должны использоваться 2 структуры - Список для хранения пройденных вершин и Стек для хранения вершин-соседей, которые нужно пройти - алгоритм в предыдущем уроке сильно поможет. 
+
+
+Для тестирования
+```python
+a = Node('a')
+b = Node('b')
+c = Node('c')
+d = Node('d')
+e = Node('e')
+f = Node('f')
+g = Node('g')
+h = Node('h')
+i = Node('i')
+k = Node('k')
+a.point_to(b)
+b.point_to(c)
+c.point_to(d)
+d.point_to(a)
+b.point_to(d)
+a.point_to(e)
+e.point_to(f)
+e.point_to(g)
+f.point_to(i)
+f.point_to(h)
+g.point_to(k)
+
+g = Graph(a)
+print(g.dfs())
+```
+
+</details>

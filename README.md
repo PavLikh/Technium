@@ -139,10 +139,10 @@ print(f"Очередь пуста: {queue.is_empty()}")  # Ожидаемый р
 <details>
 <summary>4.13 DFS через классы</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-13-grapf_dfs_class)
+[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-13-graph_dfs_class)
 
 
-### Требования 
+### Задание 
 Дописать реализацию функции dfs() для графа. Подсказка: в функции должны использоваться 2 структуры - Список для хранения пройденных вершин и Стек для хранения вершин-соседей, которые нужно пройти - алгоритм в предыдущем уроке сильно поможет. 
 
 

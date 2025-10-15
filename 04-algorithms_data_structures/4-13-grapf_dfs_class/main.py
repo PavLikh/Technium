@@ -34,10 +34,6 @@ class Graph:
         for neighbor in self.stack:
             self.dfs(neighbor)
 
-    def clear(self):
-        self._root = None
-        self.visited = []
-        self.stack = []
 
 a = Node('a')
 b = Node('b')

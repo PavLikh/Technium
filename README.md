@@ -175,3 +175,36 @@ print(g.dfs())
 ```
 
 </details>
+<details>
+<summary>4.15 Breadth-First через классы</summary>
+
+[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-15-graph-bfs-class)
+
+```python
+class Node:
+    def __init__(self, value):
+        self.value = value
+
+        self.outbound = []
+        self.inbound = []
+
+    def point_to(self, other):
+        self.outbound.append(other)
+        other.inbound.append(self)
+
+    def __str__(self):
+        return f'Node({self.value})'
+
+class Graph:
+    def __init__(self, root):
+        self._root = root
+
+    def dfs(self):
+        pass
+
+    def bfs(self):
+        pass
+```
+
+С нуля новый код писать не нужно. Если вы успешно справились с предыдущим заданием, то функция dfs() у вас уже реализована и код bfs() будет ооооочень сильно на нее походить, но с небольшим отличием в алгоритме.
+</details>

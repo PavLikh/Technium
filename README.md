@@ -211,7 +211,7 @@ class Graph:
 <details>
 <summary>4.17 Сортировка пузырьком (Bubble sort)</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-15-graph-bfs-class)
+[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-17-bubble_sort)
 
 Сортировка пузырьком (Bubble Sort) - это простой алгоритм сортировки, который многократно проходит по списку, сравнивает пары соседних элементов и меняет их местами, если они находятся в неправильном порядке. Повторяйте этот процесс до тех пор, пока весь список не будет отсортирован. 
 

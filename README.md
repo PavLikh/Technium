@@ -229,7 +229,7 @@ class Graph:
 <details>
 <summary>4.18 Сортировка вставками (Insertion sort)</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-17-bubble_sort)
+[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-18-insertion_sort)
 
 Сортировка вставками (Insertion Sort) - это алгоритм сортировки, который сначала считает первый элемент массива отсортированным и затем поочередно вставляет каждый следующий элемент в правильную позицию в отсортированной части массива. Вот пошаговое руководство по сортировке вставками::
 

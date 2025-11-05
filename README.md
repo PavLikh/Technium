@@ -208,6 +208,7 @@ class Graph:
 
 С нуля новый код писать не нужно. Если вы успешно справились с предыдущим заданием, то функция dfs() у вас уже реализована и код bfs() будет ооооочень сильно на нее походить, но с небольшим отличием в алгоритме.
 </details>
+<details>
 <summary>4.17 Сортировка пузырьком (Bubble sort)</summary>
 
 [link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-15-graph-bfs-class)

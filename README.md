@@ -261,7 +261,7 @@ class Graph:
 <details>
 <summary>4.23 O(1) - Константная сложность</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-19-selection_sort)
+[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-23-constant_time)
 
 Алгоритмы с константной сложностью выполняются за постоянное время, независимо от размера входных данных. Их временная сложность обозначается как O(1). Вот несколько примеров алгоритмов с константной сложностью:
 

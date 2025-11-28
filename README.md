@@ -398,7 +398,7 @@ def binary_search(arr, target):
 <details>
 <summary>4.29 Задача: Реализация собственного класса Dict</summary>
 
-[link]()
+[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-29-dict-practice)
 
 Описание: Представьте, что в языке Python пропали встроенные словари (dict), и вам нужно создать собственный класс MyDict, который будет вести себя подобно словарю. Класс MyDict должен поддерживать следующие операции:
   1. `__init__()`: Инициализация пустого словаря.

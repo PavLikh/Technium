@@ -296,7 +296,7 @@ length = len(my_list)  # Получить длину списка - O(1)
 <details>
 <summary>4.24 O(n) - линейная сложность</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-23-constant_time)
+[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-24-linear_complexity)
 
 Алгоритмы с линейной сложностью (O(n)) выполняются во времени, пропорциональном размеру входных данных. Это означает, что при увеличении размера входных данных вдвое, время выполнения алгоритма также увеличивается вдвое. Вот несколько примеров алгоритмов с линейной сложностью:
 

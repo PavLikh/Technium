@@ -338,7 +338,7 @@ def count_occurrences(arr, target):
 <details>
 <summary>4.25 O(log n) - Логарифмическая сложность</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-24-linear_complexity)
+[link](https://github.com/PavLikh/Technium/tree/master/04-algorithms_data_structures/4-25-logarithmic_complexity)
 
 Алгоритмы с логарифмической сложностью (O(log n)) выполняются быстрее, чем линейные алгоритмы (O(n)), их скорость роста ограничивается логарифмически по отношению к размеру входных данных. 
 

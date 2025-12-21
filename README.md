@@ -446,9 +446,10 @@ print(my_dict.values())  # Вернет ['Alice']
 ежели 3\
 еще 1
 </details>
+<details>
 <summary>5.2 CSV</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-1-files)
+[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-2-csv)
 
 ### Задание 1
 Имеется текстовый файл prices.txt с информацией о заказе из интернет магазина. В нем каждая строка с помощью символа табуляции \t разделена на три колонки: наименование товара; количество товара (целое число); цена (в рублях) товара за 1 шт. (целое число). Напишите программу, преобразующую данные из txt в csv.

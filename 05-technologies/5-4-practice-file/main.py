@@ -2,6 +2,7 @@ import json
 import csv
 import datetime
 
+# task.1
 with open('students.json', 'r', encoding="utf-8") as jsonfile:
     data = json.load(jsonfile)
     
@@ -30,6 +31,7 @@ print('Общее кол-во стундетов:', len(data))
 print(get_by_max_age(data))
 print('Количество студентов изучающих python:', count_by_subject('python', data))
 
+# task.2
 with open('sales.csv', 'r', encoding="utf-8") as csvfile:
     sales = list(csv.DictReader(csvfile))
 
@@ -102,6 +104,7 @@ for year, months in result.items():
             print(f'{m}: {months[m]}')
 
 
+# task.3
 with open('employees.json', 'r', encoding="utf-8") as jsonfile:
     employees = json.load(jsonfile)
 

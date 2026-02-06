@@ -100,3 +100,31 @@ for year, months in result.items():
     for m in months:
         if m in months:
             print(f'{m}: {months[m]}')
+
+
+with open('employees.json', 'r', encoding="utf-8") as jsonfile:
+    employees = json.load(jsonfile)
+
+with open('performance.csv', 'r', encoding="utf-8") as csvfile:
+    performance = list(csv.DictReader(csvfile))
+
+perf_dict = {
+    int(p['employee_id']): int(p['performance'])
+    for p in performance
+}
+
+employees_2 = []
+for emp in employees:
+    emp['производительность'] = perf_dict.get(emp['id'])
+    employees_2.append(emp)
+
+avg_perf = sum(perf_dict.values()) / len(perf_dict)
+max_id = max(perf_dict, key=perf_dict.get)
+for emp in employees_2:
+    if emp['id'] == max_id:
+        max_name = emp['имя']
+        break
+
+print('\n3. JSON & CSV')
+print('Средняя производительность:', avg_perf)
+print('Сотрудника с наивысшей производительностью:', max_name)

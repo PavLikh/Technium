@@ -1,5 +1,6 @@
 import json
 import csv
+import datetime
 
 with open('students.json', 'r', encoding="utf-8") as jsonfile:
     data = json.load(jsonfile)
@@ -24,6 +25,78 @@ def count_by_subject(subj: str, data: list[dict]) -> int | None:
             count += 1
     return count
 
+print('1. JSON')
 print('Общее кол-во стундетов:', len(data))
 print(get_by_max_age(data))
 print('Количество студентов изучающих python:', count_by_subject('python', data))
+
+with open('sales.csv', 'r', encoding="utf-8") as csvfile:
+    sales = list(csv.DictReader(csvfile))
+
+def total_amount(data: list[dict]) -> int | None:
+    if not data:
+        return None
+
+    return sum(int(row['Сумма']) for row in data)
+
+def max_sale_product(data: list[dict]) -> list | None:
+    if not data:
+        return None
+
+    products = {}
+    with_max_amount = [0, '']
+    with_max_quan = [0, '']
+    for row in data:
+        if row['Продукт'] not in products:
+            products[row['Продукт']] = {'count': 1, 'sum': int(row['Сумма'])}
+        else:
+            products[row['Продукт']]['count'] += 1
+            products[row['Продукт']]['sum'] += int(row['Сумма'])
+        if with_max_amount[0] < products[row['Продукт']]['sum']:
+            with_max_amount[0] = products[row['Продукт']]['sum']
+            with_max_amount[1] = row['Продукт']
+        if with_max_quan[0] < products[row['Продукт']]['count']:
+            with_max_quan[0] = products[row['Продукт']]['count']
+            with_max_quan[1] = row['Продукт']
+    
+    return [with_max_amount, with_max_quan]
+
+months = [
+        "январь", "февраль", "март", "апрель", "май", "июнь",
+        "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"
+    ]
+
+def sale_by_month(data: list[dict]) -> list | None:
+    if not data:
+        return None
+    products_by_month = {}
+    
+    for row in data:
+        d = row['Дата'].split('-')
+        date = datetime.date(int(d[0]), int(d[1]), int(d[2]))
+        if date.year not in products_by_month:
+            products_by_month[date.year] = {}
+            products_by_month[date.year][date.month] = int(row['Сумма'])
+        else:
+            if date.month not in products_by_month[date.year]:
+                products_by_month[date.year][date.month] = int(row['Сумма'])
+            else:
+                products_by_month[date.year][date.month] += int(row['Сумма'])
+
+    return {
+        year: {months[m - 1]: value for m, value in months_data.items()}
+        for year, months_data in products_by_month.items()
+    }
+
+print('\n2. CSV')
+print('Общая сумма:', total_amount(sales))
+report = max_sale_product(sales)
+print('Товар с самым высоким объемом прдаж по количеству:', report[1][1], 'Количество:', report[1][0])
+print('Товар с самым высоким объемом прдаж по сумме:', report[0][1], 'Сумма:', report[0][0])
+result = sale_by_month(sales)
+print('\nОбщая сумма по каждому месяцу')
+for year, months in result.items():
+    print(f'Год {year}:')
+    for m in months:
+        if m in months:
+            print(f'{m}: {months[m]}')

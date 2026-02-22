@@ -504,7 +504,7 @@ print(my_dict.values())  # Вернет ['Alice']
 <details>
 <summary>5.5 Модуль os</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-4-practice-file)
+[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-5-os)
 
 ### Задание 1: Работа с JSON файлом
 Задание: Управление файлами и директориями:

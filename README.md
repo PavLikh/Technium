@@ -522,7 +522,7 @@ print(my_dict.values())  # Вернет ['Alice']
 <details>
 <summary>5.6 Модуль datetime</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-5-os)
+[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-6-datetime)
 
 ### Задание: Операции с датой и временем
 Часть 1. Работа с текущей датой и временем \

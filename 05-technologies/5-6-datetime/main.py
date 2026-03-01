@@ -9,7 +9,14 @@ now = datetime.datetime.now()
 print("День:", week_days[now.weekday()])
 
 def is_leap_year(year):
-    return ((year * 1073836193) & 3222241295) <= 1015808
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0 or year % 1000 == 0:
+                return True
+            else:
+                return False
+        return True
+
 
 print('високосный') if is_leap_year(now.year) else print('не високосный')
 

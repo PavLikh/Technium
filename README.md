@@ -538,7 +538,7 @@ print(my_dict.values())  # Вернет ['Alice']
 <details>
 <summary>5.8 Практикум 2</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-6-datetime)
+[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-8-practice-collections)
 
 ### Задание 1: Анализ списка чисел с помощью Counter
 ### Задание 2: Работа с именованными кортежами

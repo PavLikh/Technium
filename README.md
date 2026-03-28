@@ -547,6 +547,7 @@ print(my_dict.values())  # Вернет ['Alice']
 ### Задание 5: Реализация простой очереди с помощью deque
 
 </details>
+<details>
 <summary>5.9 Доработка телеграм бота для отслеживания сна</summary>
 
 [link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-9-sleep-bot)

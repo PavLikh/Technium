@@ -10,6 +10,7 @@ FILE_NAME = 'data.json'
 BUTTON_SLEEP = 'Спокойной ночи'
 BUTTON_WAKE = 'Доброе утро'
 BUTTON_REPORT = 'Отчет'
+SUCCESS = 'success'
 
 bot = telebot.TeleBot(TOKEN)
 
@@ -63,7 +64,7 @@ def handle_sleep(m):
         return
 
     data[m.from_user.id]['sleep'] = True
-    data[m.from_user.id]['start'].append(datetime.now() - timedelta(hours=6, minutes=30))
+    data[m.from_user.id]['start'].append(datetime.now())
     data[m.from_user.id]['quality'].append(None)
     data[m.from_user.id]['note'].append(None)
     bot.send_message(m.chat.id,'Спокойной ночи! Не забудь сообщить мне когда проснешься /wake',reply_markup=markup)
@@ -88,7 +89,7 @@ def handle_duration(user_id):
         data[user_id]['duration'].append(duration.seconds)
         mes = 'Доброе утро! Сон длился: ' + str(round(duration.days * 3600 + duration.seconds / 3600)) + ' ч /sleep.'
     data[user_id]['sleep'] = False
-    return [mes + ' Не забудь оценить качество сна /quality и оставить заметки /note, отчет /report', 'succes']
+    return [mes + ' Не забудь оценить качество сна /quality и оставить заметки /note, отчет /report', SUCCESS]
 
 
 def handle_wake(m):
@@ -100,7 +101,7 @@ def handle_wake(m):
         return
 
     duration = handle_duration(m.from_user.id)
-    if duration[1] == 'success':
+    if duration[1] == SUCCESS:
         button1 = types.KeyboardButton(BUTTON_WAKE)
     else:
         button1 = types.KeyboardButton(BUTTON_SLEEP)

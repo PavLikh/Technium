@@ -553,3 +553,9 @@ print(my_dict.values())  # Вернет ['Alice']
 [link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-9-sleep-bot)
 
 </details>
+<details>
+<summary>5.10 Модуль itertools</summary>
+
+[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-10-itertools)
+
+</details>

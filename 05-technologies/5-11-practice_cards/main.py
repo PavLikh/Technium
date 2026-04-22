@@ -21,9 +21,9 @@ def write_combinations(count: int) -> None:
         for i in itertools.combinations(deck, count):
             if first:
                 f.write("[\n")
+                first = False
             json.dump(i, f)
             f.write(",")
-            first = False
         f.write("[\n")
 
 write_combinations(COUNT)

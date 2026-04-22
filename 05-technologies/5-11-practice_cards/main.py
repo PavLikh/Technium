@@ -17,7 +17,13 @@ deck = list(itertools.product(rank,suit))
 
 def write_combinations(count: int) -> None:
     with open(FILE_NAME + str(count) + '.json', "w", encoding="utf-8") as f:
+        first = True
         for i in itertools.combinations(deck, count):
+            if first:
+                f.write("[\n")
             json.dump(i, f)
+            f.write(",")
+            first = False
+        f.write("[\n")
 
 write_combinations(COUNT)

@@ -472,7 +472,7 @@ print(my_dict.values())  # Вернет ['Alice']
 В результате распечатать json строку с отступами равными 4.
 </details>
 <details>
-<summary>5.4 Практикум 1. Рбота с файлами</summary>
+<summary>5.4 Практикум 1. Работа с файлами</summary>
 
 [link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-4-practice-file)
 
@@ -557,5 +557,23 @@ print(my_dict.values())  # Вернет ['Alice']
 <summary>5.10 Модуль itertools</summary>
 
 [link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-10-itertools)
+
+</details>
+<details>
+<summary>5.11 Практикум 3. Генератор комбинаций карт</summary>
+
+[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-11-practice_cards)
+
+### Проект: Генератор комбинаций карт
+Цель: \
+Написать программу, которая создает все возможные комбинации из заданного количества карт (от 1 до 52) в стандартной колоде.
+
+Шаги: \
+  1. Создание колоды: \
+  Сгенерируйте список всех карт в стандартной колоде
+  2. Генерация комбинаций \
+  Используйте модуль `itertools`, чтобы получить все комбинации из заданного числа карт
+  3. Вывод результатов: \
+  Выведите все комбинации на экран или сохраните их в файл для последующего использования
 
 </details>

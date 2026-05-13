@@ -16,9 +16,6 @@ numbers = [1, 20, 31, 45, 50]
 multiple_of_five_numbers = list(filter(multiple_of_five, numbers))
 print(multiple_of_five_numbers)
 
-
-def is_even(x):
-    return x % 2 == 0
 # 3
 def odd(x):
     return x % 2 != 0

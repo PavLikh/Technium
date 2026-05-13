@@ -578,9 +578,9 @@ print(my_dict.values())  # Вернет ['Alice']
 
 </details>
 <details>
-<summary>5.13 Практикум 3. Генератор комбинаций карт</summary>
+<summary>5.13 Встроенные функции map(), filter() и reduce()</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-11-practice_cards)
+[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-13-builtin-functions)
 
 ### Задание
 Практика

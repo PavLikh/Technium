@@ -592,7 +592,7 @@ print(my_dict.values())  # Вернет ['Alice']
 <details>
 <summary>5.14 Лямбда-функции</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-13-builtin-functions)
+[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-14-lambda-functions)
 
 ### Задание
   1. Дан список строк ["apple", "kiwi", "banana", "fig]. Оставьте в нем только строки, длина которых больше 4 символов, используя  filter() и лямбда-фуекцию.

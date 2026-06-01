@@ -603,3 +603,9 @@ print(my_dict.values())  # Вернет ['Alice']
   Создайте класс Person с атрибутами name и age. Дан список объектов этого класса. Отсортируйте список объектов по возрасту с использованием sorted() и лямбда-фуекции.
 
 </details>
+<details>
+<summary>5.15 Практикум 4</summary>
+
+[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-14-lambda-functions)
+
+</details>

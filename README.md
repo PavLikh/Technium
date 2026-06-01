@@ -606,6 +606,6 @@ print(my_dict.values())  # Вернет ['Alice']
 <details>
 <summary>5.15 Практикум 4</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-14-lambda-functions)
+[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-15-practice)
 
 </details>

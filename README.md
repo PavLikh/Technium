@@ -612,6 +612,6 @@ print(my_dict.values())  # Вернет ['Alice']
 <details>
 <summary>5.16 Итоговый проект</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-15-practice)
+[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-16-final_project)
 
 </details>

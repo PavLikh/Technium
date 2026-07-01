@@ -615,3 +615,9 @@ print(my_dict.values())  # Вернет ['Alice']
 [link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-16-final_project)
 
 </details>
+<details>
+<summary>6.2 Проектирование БД и DDL в SQL</summary>
+
+[link](https://github.com/PavLikh/Technium/tree/master/05-technologies/5-16-final_project)
+
+</details>

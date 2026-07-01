@@ -1,0 +1,19 @@
+Table students {
+  id int [pk, increment]
+  name varchar(255) [not null]
+  email varchar(255) [unique, not null]
+  age int [check: `age > 14`]
+}
+
+Table courses {
+  id int [pk, increment]
+  name varchar(255) [not null]
+  professor varchar(255) [not null]
+}
+
+Table enrollments {
+  id int [pk, increment]
+  student_id int [ref: > students.id, not null]
+  course_id int [ref: > courses.id, not null]
+  status int [not null]
+}

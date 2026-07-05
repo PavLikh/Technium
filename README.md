@@ -618,6 +618,12 @@ print(my_dict.values())  # Вернет ['Alice']
 <details>
 <summary>6.2 Проектирование БД и DDL в SQL</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/06-pg/6-1)
+[link](https://github.com/PavLikh/Technium/tree/master/06-pg/6-2)
+
+</details>
+<details>
+<summary>6.3 Запросы к данным в SQL. От SELECT до GROUP BY</summary>
+
+[link](https://github.com/PavLikh/Technium/tree/master/06-pg/6-3)
 
 </details>

@@ -22,10 +22,10 @@ ALTER TABLE "enrollments" ADD FOREIGN KEY ("student_id") REFERENCES "students" (
 
 ALTER TABLE "enrollments" ADD FOREIGN KEY ("course_id") REFERENCES "courses" ("id") DEFERRABLE INITIALLY IMMEDIATE;
 
-INSERT INTO students (name, email, age) VALUES ('John', 'john@test.com', 18), ('Alex', 'alex@test.com', 19), ('Bill', 'bill@test.com', 21)
-INSERT INTO courses (name, professor) VALUES ('philosophy','J.Strikland'), ('physics','A.Einstein'), ('mathematics', 'G.Perelman')
-INSERT INTO courses (name, professor) VALUES ('economy','W.Buffet')
-INSERT INTO enrollments (student_id, course_id, status) VALUES (1,1,4), (1,2,5), (2,3,4), (3,3,4), (2,1,5)
+INSERT INTO students (name, email, age) VALUES ('John', 'john@test.com', 18), ('Alex', 'alex@test.com', 19), ('Bill', 'bill@test.com', 21);
+INSERT INTO courses (name, professor) VALUES ('philosophy','J.Strikland'), ('physics','A.Einstein'), ('mathematics', 'G.Perelman');
+INSERT INTO courses (name, professor) VALUES ('economy','W.Buffet');
+INSERT INTO enrollments (student_id, course_id, status) VALUES (1,1,4), (1,2,5), (2,3,4), (3,3,4), (2,1,5);
 
 -- INSERT INTO students (name, email, age) VALUES ('Alexis', 'alex@test.com', 19)
 -- error unique email
@@ -36,11 +36,11 @@ INSERT INTO enrollments (student_id, course_id, status) VALUES (1,1,4), (1,2,5),
 
 SELECT s.name, c.name AS course FROM students AS s
 INNER JOIN enrollments AS e ON s.id = e.student_id
-INNER JOIN courses AS c ON c.id = e.course_id
+INNER JOIN courses AS c ON c.id = e.course_id;
 
 SELECT c.name AS course, s.name  FROM courses AS c
 LEFT JOIN enrollments AS e ON c.id = e.course_id
-LEFT JOIN students AS s ON s.id = e.student_id
+LEFT JOIN students AS s ON s.id = e.student_id;
 
 SELECT * FROM courses AS c
-CROSS JOIN students AS s
+CROSS JOIN students AS s;

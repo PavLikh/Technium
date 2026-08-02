@@ -627,3 +627,9 @@ print(my_dict.values())  # Вернет ['Alice']
 [link](https://github.com/PavLikh/Technium/tree/master/06-pg/6-3)
 
 </details>
+<details>
+<summary>6.4 Расширенные возомжности SQL</summary>
+
+[link](https://github.com/PavLikh/Technium/tree/master/06-pg/6-4)
+
+</details>

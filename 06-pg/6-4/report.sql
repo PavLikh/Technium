@@ -16,13 +16,13 @@ AND name ~ '\d|(.)\1{2}';
 -- Для каждого пользователя рассчитайте:
 -- 1. количество всех ресурсов,
 -- 2. средний прогресс,
--- 3. номер по порядку ресурса внутри полþзователā (по убыванию прогресса),
+-- 3. номер по порядку ресурса внутри полþзователя (по убыванию прогресса),
 -- 4. разницу между прогрессом текушего ресурса и предыдушего (если есть)
 SELECT user_id, resource_id, progress_percent,
 	AVG(resource_id) OVER (PARTITION BY user_id),
 	COUNT(resource_id) OVER (PARTITION BY user_id),
 	ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY progress_percent DESC),
-	LAG(progress_percent) OVER (PARTITION BY user_id) - progress_percent AS diff_from_prev
+	ABS(progress_percent - LAG(progress_percent) OVER (PARTITION BY user_id)) AS diff_from_prev
 FROM user_resource_progress;
 
 

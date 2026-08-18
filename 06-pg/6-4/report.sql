@@ -9,7 +9,7 @@ WHERE id IN
 (SELECT user_id FROM public.user_resource_progress
 	WHERE status_id IN 
  	(SELECT id FROM dictionaries WHERE name = 'In Progress'))
-AND name ~ '\d|(.)\1{2}';
+AND name ~ '^\d+$|(.)\1{2}';
 
 
 -- Задача 2. Анализ прогресса с оконными функциями
@@ -19,10 +19,13 @@ AND name ~ '\d|(.)\1{2}';
 -- 3. номер по порядку ресурса внутри полþзователя (по убыванию прогресса),
 -- 4. разницу между прогрессом текушего ресурса и предыдушего (если есть)
 SELECT user_id, resource_id, progress_percent,
-	AVG(resource_id) OVER (PARTITION BY user_id),
+	AVG(progress_percent) OVER (PARTITION BY user_id),
 	COUNT(resource_id) OVER (PARTITION BY user_id),
-	ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY progress_percent DESC),
-	ABS(progress_percent - LAG(progress_percent) OVER (PARTITION BY user_id)) AS diff_from_prev
+	ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY progress_percent DESC, resource_id),
+	COALESCE(
+		ABS(progress_percent - LAG(progress_percent) OVER (PARTITION BY user_id ORDER BY progress_percent DESC, resource_id)),
+		0
+	) AS diff_from_prev		
 FROM user_resource_progress;
 
 

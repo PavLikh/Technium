@@ -660,12 +660,20 @@ print(my_dict.values())  # Вернет ['Alice']
 `SELECT * FROM user_skills WHERE user_id = ?;`
 ```
   * Часто проверяется, есть ли у пользователя определённый навык:
-    ○ `SELECT * FROM user_skills WHERE user_id = ? AND skill_id = ?;`
+```SQL
+`SELECT * FROM user_skills WHERE user_id = ? AND skill_id = ?;`
+```
   * Отображается список пользователей с неполным прогрессом по ресурсу:
-    ○ `SELECT * FROM user_resource_progress WHERE resource_id = ? AND progress_percent < 100;`
+```SQL
+`SELECT * FROM user_resource_progress WHERE resource_id = ? AND progress_percent < 100;`
+```
   * Часто используется поиск по email в нижнем регистре:
-    ○ `SELECT * FROM users WHERE LOWER(email) = 'some@email.com';`
+```SQL
+`SELECT * FROM users WHERE LOWER(email) = 'some@email.com';`
+```
   * Выводятся только user_id и progress_percent по ресурсу:
-    ○ `SELECT user_id, progress_percent FROM user_resource_progress WHERE resource_id = ?;`
+```SQL
+`SELECT user_id, progress_percent FROM user_resource_progress WHERE resource_id = ?;`
+```
 
 </details>

@@ -634,38 +634,36 @@ print(my_dict.values())  # Вернет ['Alice']
 
 </details>
 <details>
-<summary>6.5 Расширенные возомжности SQL</summary>
+<summary>6.5 Оптимихация SQL</summary>
 
-[link](https://github.com/PavLikh/Technium/tree/master/06-pg/6-4)
+[link](https://github.com/PavLikh/Technium/tree/master/06-pg/6-5)
 
 ### Задача 1. Хранимая процедура
 Создайте хранимую процедуру `update_progress_bulk`, которая:
-    * Принимает `p_resource_id int` и `p_increment int`
-    * Обновляет всем пользователāм прогресс по заданному ресурсу, увеличиват `progress_percent` на `p_increment`, но не выше 100
-    * Выводит сообщение о количестве обновлённых строк
+  * Принимает `p_resource_id int` и `p_increment int`
+  * Обновляет всем пользователāм прогресс по заданному ресурсу, увеличиват `progress_percent` на `p_increment`, но не выше 100
+  * Выводит сообщение о количестве обновлённых строк
 
 ### Задача 2. Пользовательская функция
-Создайте функцию `get_user_skill_level(user_id int, skill_id int)`
-Она должна возвращать текущий уровень пользователя по заданному
-навыку (таблица `user_skills`)
+Создайте функцию `get_user_skill_level(user_id int, skill_id int)` \
+Она должна возвращать текущий уровень пользователя по заданному навыку (таблица `user_skills`)
 
 ### Задача 3. Триггер
 Добавьте логирование в таблицу `user_skills`:
-    * Создайте таблицу `user_skills_log` с такими же полями и дополнительным `operation text`
-    * Настройте триггер, который при любом INSERT или UPDATE в `user_skills` будет сохранять запись в `user_skills_log` с операцией `insert` или `update`
+  * Создайте таблицу `user_skills_log` с такими же полями и дополнительным `operation text`
+  * Настройте триггер, который при любом INSERT или UPDATE в `user_skills` будет сохранять запись в `user_skills_log` с операцией `insert` или `update`
 
 ### Задача 4.
 Предположим, в системе часто выполняются следуюзие запросы. Для каждого из них укажите какой индекс поможет ускорить выполнение.
-Добавьте логирование в таблицу `user_skills`:
-    * Часто запрашивается навыки конкретного пользователя:
-        ○ `SELECT * FROM user_skills WHERE user_id = ?;`
-    * Часто проверяется, есть ли у пользователя определённый навык:
-        ○ `SELECT * FROM user_skills WHERE user_id = ? AND skill_id = ?;`
-    * Отображается список пользователей с неполным прогрессом по ресурсу:
-        ○ `SELECT * FROM user_resource_progress WHERE resource_id = ? AND progress_percent < 100;`
-    * Часто используется поиск по email в нижнем регистре:
-        ○ `SELECT * FROM users WHERE LOWER(email) = 'some@email.com';`
-    * Выводятся только user_id и progress_percent по ресурсу:
-        ○ `SELECT user_id, progress_percent FROM user_resource_progress WHERE resource_id = ?;`
+  * Часто запрашивается навыки конкретного пользователя:
+    ○ `SELECT * FROM user_skills WHERE user_id = ?;`
+  * Часто проверяется, есть ли у пользователя определённый навык:
+    ○ `SELECT * FROM user_skills WHERE user_id = ? AND skill_id = ?;`
+  * Отображается список пользователей с неполным прогрессом по ресурсу:
+    ○ `SELECT * FROM user_resource_progress WHERE resource_id = ? AND progress_percent < 100;`
+  * Часто используется поиск по email в нижнем регистре:
+    ○ `SELECT * FROM users WHERE LOWER(email) = 'some@email.com';`
+  * Выводятся только user_id и progress_percent по ресурсу:
+    ○ `SELECT user_id, progress_percent FROM user_resource_progress WHERE resource_id = ?;`
 
 </details>

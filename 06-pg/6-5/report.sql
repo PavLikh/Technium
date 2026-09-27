@@ -11,7 +11,6 @@ BEGIN
 	UPDATE public.user_resource_progress
 	SET progress_percent = LEAST(progress_percent + p_increment, 100)
 	WHERE resource_id = p_resource_id
-		AND status_id <> 7
 		AND progress_percent < 100;
 	GET DIAGNOSTICS rows_updated = ROW_COUNT;
 		
@@ -90,12 +89,12 @@ CREATE INDEX idx_user_id ON user_skills(user_id);
 CREATE INDEX idx_user_skill ON user_skills(user_id, skill_id);
 
 -- 3 SELECT * FROM user_resource_progress WHERE resource_id = ? AND progress_percent < 100;
-CREATE INDEX idx_user_in_process ON user_skills(resource_id)
+CREATE INDEX idx_user_in_process ON user_resource_progress(resource_id)
 	WHERE progress_percent < 100;
 
 -- 4 SELECT * FROM users WHERE LOWER(email) = 'some@email.com';
 CREATE INDEX idx_lower_email ON users (LOWER(email));
 
 -- 5 SELECT user_id, progress_percent FROM user_resource_progress WHERE resource_id = ?;
-CREATE INDEX idx ON user_resource_progresss(user_id)
-	INCLUDE (progress_percent);
+CREATE INDEX idx ON user_resource_progress(user_id)
+	INCLUDE (resource_id);

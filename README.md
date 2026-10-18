@@ -677,3 +677,9 @@ print(my_dict.values())  # Вернет ['Alice']
 ```
 
 </details>
+<details>
+<summary>6.6 Введение в SQLite и его использование в Python</summary>
+
+[link](https://github.com/PavLikh/Technium/tree/master/06-pg/6-6-sqlite)
+
+</details>

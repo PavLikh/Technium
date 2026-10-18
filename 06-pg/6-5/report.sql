@@ -96,5 +96,5 @@ CREATE INDEX idx_user_in_process ON user_resource_progress(resource_id)
 CREATE INDEX idx_lower_email ON users (LOWER(email));
 
 -- 5 SELECT user_id, progress_percent FROM user_resource_progress WHERE resource_id = ?;
-CREATE INDEX idx ON user_resource_progress(user_id)
-	INCLUDE (resource_id);
+CREATE INDEX idx ON user_resource_progress(resource_id) 
+	INCLUDE (user_id, progress_percent);

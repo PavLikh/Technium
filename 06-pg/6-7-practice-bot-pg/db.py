@@ -293,3 +293,9 @@ class Notes(Table):
             return cur.execute(query, (sleep_record_id,)).fetchone()
         finally:
             cur.close()
+
+
+db = DataBase()
+users = Users(db)
+sleep_records = SleepRecords(db)
+notes = Notes(db)

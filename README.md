@@ -683,3 +683,9 @@ print(my_dict.values())  # Вернет ['Alice']
 [link](https://github.com/PavLikh/Technium/tree/master/06-pg/6-6-sqlite)
 
 </details>
+<details>
+<summary>6.7 Практикум по работе с SQLite. Итоговый проект</summary>
+
+[link](https://github.com/PavLikh/Technium/tree/master/06-pg/6-7-practice-bot-pg)
+
+</details>
